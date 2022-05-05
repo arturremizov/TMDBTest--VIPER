@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies-->
+        <scene sceneID="aG8-yc-oUD">
+            <objects>
+                <collectionViewController storyboardIdentifier="MovieListViewController" id="QMe-4V-5dS" customClass="MovieListViewController" customModule="TMDBTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" id="Mxq-Z5-Vy6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="AppBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vk8-UT-6vA">
+                            <size key="itemSize" width="205" height="306"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="htW-lB-R3T" customClass="MovieCell" customModule="TMDBTest" customModuleProvider="target">
+                                <rect key="frame" x="104.5" y="10" width="205" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8re-JO-x6A">
+                                    <rect key="frame" x="0.0" y="0.0" width="205" height="306"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PDC-Tx-ISN">
+                                            <rect key="frame" x="0.0" y="0.0" width="205" height="250.5"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XeZ-yb-Xfq">
+                                            <rect key="frame" x="0.0" y="258.5" width="205" height="39.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hS-Cn-9XZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="205" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-Wx-HNc">
+                                                    <rect key="frame" x="0.0" y="21.5" width="205" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="39.5" id="mga-UJ-624"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="PDC-Tx-ISN" firstAttribute="top" secondItem="8re-JO-x6A" secondAttribute="top" id="0Fd-sz-TI4"/>
+                                        <constraint firstAttribute="trailing" secondItem="XeZ-yb-Xfq" secondAttribute="trailing" id="342-hM-c9O"/>
+                                        <constraint firstItem="XeZ-yb-Xfq" firstAttribute="top" secondItem="PDC-Tx-ISN" secondAttribute="bottom" constant="8" symbolic="YES" id="9yi-rs-rPf"/>
+                                        <constraint firstItem="PDC-Tx-ISN" firstAttribute="leading" secondItem="8re-JO-x6A" secondAttribute="leading" id="JcQ-aZ-Icv"/>
+                                        <constraint firstAttribute="trailing" secondItem="PDC-Tx-ISN" secondAttribute="trailing" id="T6x-dm-dJS"/>
+                                        <constraint firstAttribute="bottom" secondItem="XeZ-yb-Xfq" secondAttribute="bottom" constant="8" id="b4N-x5-Mm5"/>
+                                        <constraint firstItem="XeZ-yb-Xfq" firstAttribute="leading" secondItem="8re-JO-x6A" secondAttribute="leading" id="mGe-YC-vtv"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="205" height="306"/>
+                                <connections>
+                                    <outlet property="posterImageView" destination="PDC-Tx-ISN" id="gZI-fM-Kyd"/>
+                                    <outlet property="releaseDateLabel" destination="KRY-Wx-HNc" id="C3m-Fr-0Mm"/>
+                                    <outlet property="titleLabel" destination="7hS-Cn-9XZ" id="FS3-db-Z6I"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IndicatorCell" id="QCs-tp-rXu" customClass="IndicatorCell" customModule="TMDBTest" customModuleProvider="target">
+                                <rect key="frame" x="57.5" y="326" width="299" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NZy-R8-OM0">
+                                    <rect key="frame" x="0.0" y="0.0" width="299" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="86x-5e-vDX">
+                                            <rect key="frame" x="139.5" y="65" width="20" height="20"/>
+                                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="86x-5e-vDX" firstAttribute="centerX" secondItem="NZy-R8-OM0" secondAttribute="centerX" id="1PN-S6-BHe"/>
+                                        <constraint firstItem="86x-5e-vDX" firstAttribute="centerY" secondItem="NZy-R8-OM0" secondAttribute="centerY" id="wTe-vR-JYc"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="299" height="150"/>
+                                <connections>
+                                    <outlet property="activityIndicatorView" destination="86x-5e-vDX" id="pB8-58-GCp"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="QMe-4V-5dS" id="u70-7d-H0o"/>
+                            <outlet property="delegate" destination="QMe-4V-5dS" id="tlK-0h-lj1"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Movies" id="DjF-G0-03B"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fyz-dU-dhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="-80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AppBackgroundColor">
+            <color red="0.12999999523162842" green="0.12999999523162842" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
